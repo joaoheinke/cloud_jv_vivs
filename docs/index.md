@@ -1,25 +1,25 @@
 # Computação em Nuvem
 
 
-???+ info inline end "Edição"
+???+ info inline end "Projeto realizado em:"
 
     2025.1
 
 
-## KIT-P
+## KIT-D
 
-João da Silva
+João Vitor Heinke Siqueira
 
-Pedro de Souza
+Victória de Oliveira Farias
 
 
 ## Entregas
 
-- [x] Roteiro 1 - Data 23/02/2025
-- [ ] Roteiro 2
-- [ ] Roteiro 3
-- [ ] Roteiro 4
-- [ ] Projeto
+- [x] Roteiro 1
+- [x] Roteiro 2
+- [x] Roteiro 3
+- [x] Roteiro 4
+- [x] Projeto
 
 
 ## Referências

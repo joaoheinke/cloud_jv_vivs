@@ -14,21 +14,25 @@ O primeiro passo foi a instalação do Juju na máquina principal da rede, a mai
 ## Verificação e Integração com o MAAS
 Foi necessário integrar o Juju com o MAAS, permitindo que ele o reconhecesse como um provedor de cloud. Para verificar se o Juju já reconhecia o MAAS usou-se o comando juju clouds. Como não houve o reconhecimento automático, foi necessário adicionar manualmente uma definição de cloud via o arquivo maas-cloud.yaml: 
 
-<!-- termynal -->
-    clouds:
-    maas-one:
-        type: maas
-        auth-types: [oauth1]
-        endpoint: http://192.168.0.3:5240/MAAS/
+``` bash
+clouds:
+  maas-one:
+    type: maas
+    auth-types: [oauth1]
+    endpoint: http://192.168.0.3:5240/MAAS/
+```
+
+
 
 Esse arquivo informa ao Juju o endpoint do MAAS, além do tipo de autenticação usada (oauth1). O arquivo foi adicionado ao Juju com o seguinte comando.
 
 
 <!-- termynal -->
-
+``` bash
     juju add-cloud --client -f maas-cloud.yaml maas-one
+``` 
 
-Esse arquivo foi adicionado com:
+Esse arquivo foi adicionado com
 
 <!-- termynal -->
 
@@ -38,18 +42,16 @@ juju add-cloud --client -f maas-cloud.yaml maas-one
 
 Criou-se o arquivo maas-creds.yaml com a chave OAuth gerada no painel do MAAS para que o Juju possa interagir com a nova cloud adicionada:
 
-<!-- termynal -->
-        credentials:
+``` bash
+    credentials:
         maas-one:
             anyuser:
             auth-type: oauth1
             maas-oauth: <API_KEY>
+```  
 
+Adicionou-se as credenciais com
 
-[Mermaid](https://mermaid.js.org/syntax/architecture.html){:target="_blank"}
-
-
-Adicionou-se as credenciais com:
 <!-- termynal -->
 
 ``` bash
@@ -61,6 +63,7 @@ juju add-credential --client -f maas-creds.yaml maas-one
 Para provisionar corretamente o controller em uma máquina física: Atribuiu-se a tag juju à máquina server1 pelo painel do MAAS. Em seguida, executamos o bootstrap do controller com o comando:
 
 <!-- termynal -->
+
     juju bootstrap --bootstrap-series=jammy --constraints tags=juju maas-one maas-controller
 
 Esse processo envolve a alocação da máquina, instalação do sistema operacional (Ubuntu), instalação do Juju Agent e configuração inicial da cloud privada. O controlador do Juju é o componente central que gerencia toda a infraestrutura Juju: ele rastreia os modelos, máquinas, aplicações, estados, etc. 
