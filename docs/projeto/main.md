@@ -116,6 +116,9 @@ Fluxo:
 - Pode ser usado como verificação de saúde automática pela AWS.
 
 ![Endpoints testados](./entrega1.jpg)
+/// caption
+Endpoints testados
+///
 
 ### Dockerização da API
 
@@ -195,13 +198,13 @@ Com isso, a aplicação se tornou totalmente autocontida, podendo ser executada 
 
 - Separação entre código-fonte e infraestrutura;
 
-## ☁️ Implantação no AWS Lightsail (Etapa 2)
+## Implantação no AWS Lightsail (Etapa 2)
 
 A segunda etapa do projeto consiste em publicar a API desenvolvida em um ambiente de produção, utilizando a plataforma de nuvem **AWS Lightsail**. Esta fase valida a capacidade do aluno de colocar sua aplicação no ar com infraestrutura real e segura.
 
 ---
 
-### 🚀 1. Implantação da Aplicação com AWS Lightsail Container Service
+### 1. Implantação da Aplicação com AWS Lightsail Container Service
 
 A API FastAPI foi implantada como **container** dentro do serviço "Container Service" do AWS Lightsail. A imagem da aplicação, previamente publicada no Docker Hub, foi referenciada diretamente na configuração do container.
 
@@ -214,9 +217,12 @@ A API FastAPI foi implantada como **container** dentro do serviço "Container Se
 
 Através desse processo, a aplicação ficou disponível online, acessível por um domínio gerado automaticamente pela AWS (Nosso link: `container-service-1.wycptcgypsd8p.us-east-1.cs.amazonlightsail.com`).
 ![Infra rodando na AWS](./entrega2_infra.jpg)
+/// caption
+Infra rodando na AWS
+///
 ---
 
-### 🗃️ 2. Configuração do Banco de Dados Gerenciado (PostgreSQL)
+### 2. Configuração do Banco de Dados Gerenciado (PostgreSQL)
 
 Além da aplicação, foi criado um banco de dados gerenciado do tipo **PostgreSQL** diretamente no painel do AWS Lightsail. Essa abordagem traz vantagens como:
 
@@ -236,19 +242,26 @@ Foi importante garantir que a **zona de disponibilidade (AZ)** do banco coincidi
 
 ---
 
-### 🔗 3. Conexão da Aplicação ao Banco
+### 3. Conexão da Aplicação ao Banco
 
 Para conectar a API ao banco, foi necessário configurar corretamente as **variáveis de ambiente** na tela de deploy do container no Lightsail.
 
 
 ![Custos no dia 1/06/2025](./entrega2_custos.jpg)
+/// caption
+Custos no dia 1/06/2025
+///
 
 ![Health_check funcionando](./entrega2_health.jpg)
-
+/// caption
+Health_check funcionando
+///
 
 ## Link do video da aplicação funcionando 
 ![Endpoints funcionando](./entrega2_endpoints.jpg)
-
+/// caption
+Endpoints funcionando
+///
 https://youtu.be/QvdRbJoUZag
 
 

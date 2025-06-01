@@ -130,9 +130,21 @@ Este comando é utilizado para criar um plano de execução. Ele mostra quais a�
 O comando terraform apply aplica as mudanças necessárias para alcançar o estado desejado da sua configuração. Ele cria, atualiza ou destrói os recursos conforme necessário.
 
 ![Da aba Identy projects no OpenStack.](./tarefa1.png)
+/// caption
+Da aba Identy projects no OpenStack.
+///
 ![Da aba Identy users no OpenStack.](./tarefa2.png)
+/// caption
+Da aba Identy users no OpenStack.
+///
 ![Da aba compute overview no OpenStack.](./tarefa3.png)
+/// caption
+Da aba compute overview no OpenStack.
+///
 ![Da aba network topology no OpenStack.](./tarefa4.png)
+/// caption
+Da aba network topology no OpenStack.
+///
 
 ## Conclusão
 
