@@ -207,13 +207,13 @@ A API FastAPI foi implantada como **container** dentro do serviço "Container Se
 
 **Configurações utilizadas:**
 
-- **Service name**: `fastapi-service`  
+- **Service name**: `container-service-1`  
 - **Power**: Micro (suficiente para aplicação de testes e com menor custo)  
 - **Scale**: 1 instância (para minimizar o custo)  
 - **Public Endpoint**: habilitado para permitir acesso externo
 
-Através desse processo, a aplicação ficou disponível online, acessível por um domínio gerado automaticamente pela AWS (ex: `https://fastapi-service.kj324.awscontainers.com`).
-
+Através desse processo, a aplicação ficou disponível online, acessível por um domínio gerado automaticamente pela AWS (Nosso link: `container-service-1.wycptcgypsd8p.us-east-1.cs.amazonlightsail.com`).
+![Infra rodando na AWS](./entrega2_infra.jpg)
 ---
 
 ### 🗃️ 2. Configuração do Banco de Dados Gerenciado (PostgreSQL)
@@ -240,3 +240,12 @@ Foi importante garantir que a **zona de disponibilidade (AZ)** do banco coincidi
 
 Para conectar a API ao banco, foi necessário configurar corretamente as **variáveis de ambiente** na tela de deploy do container no Lightsail.
 
+
+![Custos no dia 1/06/2025](./entrega2_custos.jpg)
+
+![Health_check funcionando](./entrega2_health.jpg)
+
+
+## Link do video da aplicação funcionando 
+![Endpoints funcionando](./entrega2_endpoints.jpg)
+https://youtu.be/QvdRbJoUZag
