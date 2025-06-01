@@ -248,4 +248,5 @@ Para conectar a API ao banco, foi necessário configurar corretamente as **vari�
 
 ## Link do video da aplicação funcionando 
 ![Endpoints funcionando](./entrega2_endpoints.jpg)
+
 https://youtu.be/QvdRbJoUZag
